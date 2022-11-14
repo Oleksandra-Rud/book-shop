@@ -5,9 +5,12 @@ nameBookShop.innerText = "JS Book-Shop - We sell only JS books";
 fragment.appendChild(nameBookShop);
 document.body.appendChild(fragment);
 
-//function h1 (text) {let h1 = document.createElement(`h1`);
-//h1.appendChild(document.createTextNode(text));
-//document.body.appendChild(h1);}
+let h1 = document.getElementsByTagName("h1");
+let fragmentClass = new DocumentFragment();
+let classBooks = document.createElement("div");
+classBooks.classList.add("books");
+fragmentClass.appendChild(classBooks);
+document.h1.appendChild(fragmentClass);
 
 async function getBook() {
   await fetch("books.json")
