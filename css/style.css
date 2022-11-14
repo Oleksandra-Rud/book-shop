@@ -1,0 +1,62 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+  background-color: rgb(31, 31, 31);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(31, 31, 31);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgb(58, 58, 58);
+}
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.book {
+  width: 200px;
+  margin: 5px;
+
+  position: relative;
+}
+
+.book__cover-inner {
+  position: relative;
+}
+
+.book__cover {
+}
+
+.book__cover--darkened {
+}

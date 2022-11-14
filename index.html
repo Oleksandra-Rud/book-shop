@@ -4,9 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Book-store</title>
   </head>
   <body>
-    <img src="assets/getStarted_shadow.png" alt="test" />
+    <h1>JS Book-Shop - we sell only JS books</h1>
+    <div class="container">
+      <div class="books">
+        <div class="book">
+          <div class="book__cover-inner">
+            <img src="assets/TheGoodParts_shadow.png" class="book-cover" />
+            <div class="book__cover--darkened"></div>
+          </div>
+
+          <div class="book__info">
+            <div class="book__title">JavaScript: The Good Parts</div>
+            <div class="book__author">Douglas Crockford</div>
+            <div class="book__price">30 $</div>
+            <div class="book__button">
+              <button type="button" class="add-to-bag">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
   </body>
 </html>
