@@ -19,7 +19,7 @@ h1 {
   margin-bottom: 10px;
   color: white;
 }
-button {
+.add-to-bag {
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -34,7 +34,7 @@ button {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
-button:hover {
+.add-to-bag:hover {
   cursor: pointer;
   background-color: rgb(58, 58, 58);
 }
@@ -45,18 +45,51 @@ button:hover {
 }
 
 .book {
-  width: 200px;
+  width: 300px;
   margin: 5px;
-
   position: relative;
 }
 
 .book__cover-inner {
   position: relative;
+  height: 400px;
 }
 
 .book__cover {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .book__cover--darkened {
+  background-color: rgb(255, 255, 255);
+  opacity: 0.1;
+  position: absolute;
+  max-width: 100%;
+  height: 95%;
+
+  left: 0;
+  right: 0;
+  bottom: 22px;
+  z-index: 1;
+}
+.book__cover--darkened:hover {
+  cursor: pointer;
+  background-color: rgb(182, 182, 182);
+  opacity: 0.2;
+  border-radius: 7px;
+}
+.book__info {
+  padding-left: 5px;
+}
+.book__title {
+  font-size: 18px;
+  font-weight: 500;
+}
+.book__author {
+  font-style: italic;
+  font-weight: 300;
+}
+.book__price {
+  font-weight: 500;
+  font-size: 16px;
 }
