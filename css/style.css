@@ -6,12 +6,12 @@
 
 body {
   font-family: "Roboto", sans-serif;
-}
-.container {
-  max-width: 1200px;
   margin: 0 auto;
 }
+
 h1 {
+  position: relative;
+  top: 0;
   text-align: center;
   background-color: rgb(31, 31, 31);
   padding-top: 20px;
@@ -22,6 +22,7 @@ h1 {
 .add-to-bag {
   display: block;
   margin: 0 auto;
+
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
@@ -92,4 +93,7 @@ h1 {
 .book__price {
   font-weight: 500;
   font-size: 16px;
+}
+.book__button {
+  margin-bottom: 10px;
 }
