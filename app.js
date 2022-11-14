@@ -12,6 +12,7 @@ getBook();
 
 function showBooks(respData) {
   const booksEl = document.querySelector(".books");
+
   respData.forEach((book) => {
     const bookEl = document.createElement("div");
     bookEl.classList.add("book");
@@ -30,7 +31,7 @@ function showBooks(respData) {
             <div class="book__price"><span class="priceN">${book.price}</span> $</div>
             <div class="book__button">
               <button type="button" class="add-to-bag">Add to Bag</button>
-            </div>`;
+            </div> </div>`;
     booksEl.appendChild(bookEl);
   });
 }
