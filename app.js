@@ -1,3 +1,14 @@
+let body = document.getElementsByTagName("body");
+let fragment = new DocumentFragment();
+let nameBookShop = document.createElement("h1");
+nameBookShop.innerText = "JS Book-Shop - We sell only JS books";
+fragment.appendChild(nameBookShop);
+document.body.appendChild(fragment);
+
+//function h1 (text) {let h1 = document.createElement(`h1`);
+//h1.appendChild(document.createTextNode(text));
+//document.body.appendChild(h1);}
+
 async function getBook() {
   await fetch("books.json")
     .then((response) => {
