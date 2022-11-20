@@ -45,10 +45,11 @@ function showBooks(respData) {
 }
 
 //modal element
+const modalEl = document.querySelector(".modal");
 async function openModal(title) {
   console.log(title);
   modalEl.classList.add("modal--show");
-  const modalEl = document.querySelector(".modal");
+
   modalEl.innerHTML = `
 <div class="modal__card">
   <img src="" class="modal__book-backdrop" alt="">
