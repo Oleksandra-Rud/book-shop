@@ -36,10 +36,14 @@ function showBooks(respData) {
             <div class="book__title">${book.title}</div>
             <div class="book__author">${book.author}</div>
             <div class="book__price"><span class="priceN">${book.price}</span> $</div>
+            <div class="info__button">
+              <button type="button" class="view-info">More Info</button>
+            </div>
             <div class="book__button">
               <button type="button" class="add-to-bag">Add to Bag</button>
             </div> </div>`;
-    bookEl.addEventListener("click", () => openModal(book.title));
+    const btnOpen = document.querySelector(".view-info");
+    btnOpen.addEventListener("click", () => openModal(book.title));
     booksEl.appendChild(bookEl);
   });
 }
@@ -64,4 +68,10 @@ async function openModal(title) {
   </div>
   <button type="button" class="modal__button-close">Close Description</button>
 <div>`;
+  const btnClose = document.querySelector(".modal__button-close");
+  btnClose.addEventListener("click", () => closeModal());
+}
+
+function closeModal() {
+  modalEl.classList.remove("modal-show");
 }
