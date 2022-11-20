@@ -73,5 +73,5 @@ async function openModal(title) {
 }
 
 function closeModal() {
-  modalEl.classList.remove("modal-show");
+  modalEl.classList.remove("modal--show");
 }
