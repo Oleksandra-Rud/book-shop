@@ -42,8 +42,8 @@ function showBooks(respData) {
             <div class="book__button">
               <button type="button" class="add-to-bag">Add to Bag</button>
             </div> </div>`;
-    const btnOpen = document.querySelector(".view-info");
-    btnOpen.addEventListener("click", () => openModal(book.title));
+    //const btnOpen = document.querySelector(".view-info");
+    booksEl.addEventListener("click", () => openModal(book.title));
     booksEl.appendChild(bookEl);
   });
 }
