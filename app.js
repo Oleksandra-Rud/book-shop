@@ -39,6 +39,28 @@ function showBooks(respData) {
             <div class="book__button">
               <button type="button" class="add-to-bag">Add to Bag</button>
             </div> </div>`;
+    bookEl.addEventListener("click", () => openModal(book.title));
     booksEl.appendChild(bookEl);
   });
+}
+
+//modal element
+async function openModal(title) {
+  console.log(title);
+  modalEl.classList.add("modal--show");
+  const modalEl = document.querySelector(".modal");
+  modalEl.innerHTML = `
+<div class="modal__card">
+  <img src="" class="modal__book-backdrop" alt="">
+  <h2>
+    <span class="modal__book-title">Book Title </span>
+    <span class="modal__book-author">Book Author </span>
+
+  </h2> 
+  <div class="modal__book-info">
+    <div class="loader"></div>
+    <div class="modal__book-overview">Description</div>
+  </div>
+  <button type="button" class="modal__button-close">Close Description</button>
+<div>`;
 }
