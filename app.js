@@ -47,7 +47,7 @@ function showBooks(respData) {
               <button type="button" class="add-to-bag">Add to Bag</button> </div>
             </div> </div>`;
     //const btnOpen = document.querySelector(".view-info");
-    booksEl.addEventListener("click", () => openModal(id));
+    booksEl.addEventListener("click", () => openModal(book.title));
 
     booksEl.appendChild(bookEl);
   });
@@ -55,8 +55,8 @@ function showBooks(respData) {
 
 //modal element
 const modalEl = document.querySelector(".modal");
-async function openModal(id) {
-  const resp = await fetch("books.json" + id);
+async function openModal(title) {
+  const resp = await fetch("books.json" + title);
   const respData = await resp.json();
   respData.forEach((book) => {
     modalEl.classList.add("modal--show");
