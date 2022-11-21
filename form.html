@@ -17,34 +17,128 @@
     <h1><a href="index.html">JS Book-Shop - We sell only JS books</a></h1>
     <section class="order">
       <h2>Complete Your Order</h2>
-      <form>
-        Name
+      <form id="form-user" action="#" method="post">
+        <div class="form-box error" data-errormsg="">
+          <label for="input-first">Your Name *: </label>
+          <input
+            type="text"
+            id="input-first"
+            autofocus
+            placeholder=" First Name"
+            tabindex="1"
+          />
+        </div>
         <!--mandatory, the length not less than 4 symbols, strings only,
       without spaces-->
 
-        Surname
+        <div class="form-box error" data-errormsg="">
+          <label for="input-second">Surname *: </label>
+          <input
+            type="text"
+            id="input-second"
+            autofocus
+            placeholder=" Second Name"
+            tabindex="2"
+          />
+        </div>
         <!-- mandatory, the length not less than 5 symbols,
       strings only, without spaces-->
+        <div class="delivery">
+          <label for="start">Choose Your Delivery Date *: </label>
 
-        Delivery date
+          <input
+            type="date"
+            id="start"
+            name="trip-start"
+            value="2022-11-28"
+            min="2022-11-28"
+            max="2022-12-31"
+          />
+        </div>
         <!--mandatory, not earlier than
       next day) -->
 
-        Street
+        Enter Your Adress:
+        <div class="form-box error" data-errormsg="">
+          <label for="input-first">Your Street *: </label>
+          <input
+            type="text"
+            id="input-first"
+            autofocus
+            placeholder=" Street"
+            tabindex="4"
+          />
+        </div>
+
         <!-- mandatory, the length not less than 5 symbols, the
       numbers are allowed) -->
-        House number
+
+        <div class="form-box error" data-errormsg="">
+          <label for="input-first">House Number *: </label>
+          <input
+            type="number"
+            id="input-first"
+            autofocus
+            placeholder=" House number"
+            tabindex="5"
+          />
+        </div>
+
         <!--mandatory, numbers only, positive
       numbers only) -->
-        Flat number
+
+        <div class="form-box error" data-errormsg="">
+          <label for="input-first">Flat Number *: </label>
+          <input
+            type="number"
+            id="input-first"
+            autofocus
+            placeholder=" Flat number"
+            tabindex="6"
+          />
+        </div>
+
         <!-- mandatory, numbers only, positive numbers only,
       the dash symbol is allowed. Means, the flat number shouldn't start with
       minus/dash symbol. For example: -37 is invalid, but 1-37 is valid)-->
-
-        Choose the payment type
+        <div class="payment-class">
+          Choose the payment type *:
+          <div class="payment-type">
+            <input type="radio" name="payment" value="Cash" id="Cash" />
+            <label for="Cash"></label>
+            <span class="checkmark2">Cash</span>
+            <input type="radio" name="payment" id="Card" value="Card" checked />
+            <label for="Card"></label>
+            <span class="checkmark2">Card</span>
+          </div>
+        </div>
         <!--(radio buttons group): Cash or Card (mandatory)-->
 
-        Choose a gift:
+        <div class="gifts">
+          Choose 2 gifts:
+          <div class="gift-choose">
+            <input type="radio" name="gift1" value="pack" id="pack" />
+            <label for="pack"></label>
+            <span class="checkmark">Pack as a gift</span>
+            <input
+              type="radio"
+              name="gift1"
+              id="postcard"
+              value="postcard"
+              checked
+            />
+            <label for="postcard"></label>
+            <span class="checkmark">Add postcard</span>
+          </div>
+          <div class="gift-choose">
+            <input type="radio" name="gift2" value="discount" id="discount" />
+            <label for="discount"></label>
+            <span class="checkmark">Provide 2% discount to the next time</span>
+            <input type="radio" name="gift2" id="pen" value="pen" checked />
+            <label for="pen"></label>
+            <span class="checkmark">Branded pen or pencil</span>
+          </div>
+        </div>
         <!--(optional) pack as a gift, add postcard, provide 2% discount to the
       next time, branded pen or pencil-->
 
