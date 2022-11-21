@@ -50,9 +50,9 @@ function showBooks(respData) {
     //btnOpen.addEventListener("click", () => openModal(book.title));
 
     booksEl.appendChild(bookEl);
+    let btnOpen = document.getElementsByClassName("modal__button");
+    btnOpen.addEventListener("click", () => openModal(book.title));
   });
-  let btnOpen = document.getElementsByClassName("modal__button");
-  btnOpen.addEventListener("click", () => openModal(book.title));
 }
 
 //modal element
