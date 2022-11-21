@@ -52,7 +52,9 @@ function showBooks(respData) {
     booksEl.appendChild(bookEl);
 
     const btnOpen = document.getElementsByClassName("modal__button");
-    btnOpen.addEventListener("click", () => openModal(book.title));
+    for (let i = 0; i < modal__button.length; i++) {
+      btnOpen[i].addEventListener("click", () => openModal(book.title));
+    }
   });
 }
 
