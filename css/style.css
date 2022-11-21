@@ -150,3 +150,7 @@ button:hover {
 #confirm-order:hover {
   background-color: #1c6e6e;
 }
+
+.modal__button {
+  background-color: #1c6e6e;
+}
