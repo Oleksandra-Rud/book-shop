@@ -47,7 +47,7 @@ function showBooks(respData) {
               <button type="button" class="add-to-bag">Add to Bag</button> </div>
             </div> </div>`;
     //const btnOpen = document.querySelector(".view-info");
-    booksEl.addEventListener("click", () => openModal(book));
+    booksEl.addEventListener("click", () => openModal(book.title));
 
     booksEl.appendChild(bookEl);
 
@@ -59,10 +59,9 @@ function showBooks(respData) {
 
 //modal element
 const modalEl = document.querySelector(".modal");
-async function openModal(book) {
-  // const respData = await fetch("books.json").then((response) => {
-  //   return response.json();
-  // });
+async function openModal(title) {
+  const resp = await fetch("books.json" + title);
+  const respData = resp.json();
 
   console.log(book);
   modalEl.classList.add("modal--show");
@@ -72,7 +71,7 @@ async function openModal(book) {
   <img src="" class="modal__book-backdrop" alt="">
   <h2>
     <span class="modal__book-title">Title</span>
-    <span class="modal__book-author">${book.author} </span>
+    <span class="modal__book-author">${respData.author} </span>
 
   </h2> 
   <div class="modal__book-info">
