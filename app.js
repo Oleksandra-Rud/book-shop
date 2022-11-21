@@ -39,17 +39,18 @@ function showBooks(respData) {
             <div class="book__title">${book.title}</div>
             <div class="book__author">${book.author}</div>
             <div class="book__price"><span class="priceN">${book.price}</span> $</div>
+            <div class="buttons__together">
             <div class="info__button">
               <button type="button" class="modal__button">More Info</button>
             </div>
             <div class="book__button">
-              <button type="button" class="add-to-bag">Add to Bag</button>
+              <button type="button" class="add-to-bag">Add to Bag</button> </div>
             </div> </div>`;
     //const btnOpen = document.querySelector(".view-info");
     //btnOpen.addEventListener("click", () => openModal(book.title));
 
     booksEl.appendChild(bookEl);
-    let btnOpen = document.querySelectorAll(".info__button");
+    let btnOpen = document.getElementsByClassName("modal__button");
     btnOpen.addEventListener("click", () => openModal(book.title));
   });
 }
