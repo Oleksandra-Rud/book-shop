@@ -48,9 +48,11 @@ function showBooks(respData) {
             </div> </div>`;
     //const btnOpen = document.querySelector(".view-info");
     //btnOpen.addEventListener("click", () => openModal(book.title));
+
+    booksEl.appendChild(bookEl);
+
     const btnOpen = document.getElementsByClassName("modal__button");
     btnOpen.addEventListener("click", () => openModal(book.title));
-    booksEl.appendChild(bookEl);
   });
 }
 
