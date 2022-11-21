@@ -71,8 +71,8 @@ async function openModal(title) {
 <div class="modal__card">
   <img src="" class="modal__book-backdrop" alt="">
   <h2>
-    <span class="modal__book-title">${respData.title}</span>
-    <span class="modal__book-author">Book Author </span>
+    <span class="modal__book-title">${title}</span>
+    <span class="modal__book-author">${author} </span>
 
   </h2> 
   <div class="modal__book-info">
