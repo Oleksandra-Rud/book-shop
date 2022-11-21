@@ -49,7 +49,7 @@ function showBooks(respData) {
     //btnOpen.addEventListener("click", () => openModal(book.title));
 
     booksEl.appendChild(bookEl);
-    let btnOpen = document.querySelector(`.info__button`);
+    let btnOpen = document.querySelectorAll(".info__button");
     btnOpen.addEventListener("click", () => openModal(book.title));
   });
 }
