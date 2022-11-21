@@ -62,15 +62,15 @@ const modalEl = document.querySelector(".modal");
 async function openModal(title) {
   const resp = await fetch("books.json");
   const respData = await resp.json();
-  console.log(respData);
-  modalEl.classList.add("modal--show");
+  respData.forEach((book) => {
+    modalEl.classList.add("modal--show");
 
-  modalEl.innerHTML = `
+    modalEl.innerHTML = `
 <div class="modal__card">
-  <img src="" class="modal__book-backdrop" alt="">
+  <img src="${book.imageLink}" class="modal__book-backdrop" alt="">
   <h2>
-    <span class="modal__book-title">${respData.title}</span>
-    <span class="modal__book-author">${respData.author} </span>
+    <span class="modal__book-title">${book.title}</span>
+    <span class="modal__book-author">${book.author} </span>
 
   </h2> 
   <div class="modal__book-info">
@@ -79,8 +79,9 @@ async function openModal(title) {
   </div>
   <button type="button" class="modal__button-close">Close Description</button>
 <div>`;
-  const btnClose = document.querySelector(".modal__button-close");
-  btnClose.addEventListener("click", () => closeModal());
+    const btnClose = document.querySelector(".modal__button-close");
+    btnClose.addEventListener("click", () => closeModal());
+  });
 }
 
 function closeModal() {
