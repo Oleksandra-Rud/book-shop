@@ -53,26 +53,26 @@ function showBooks(respData) {
 
     //let modalButton = document.querySelector(".modalButton");
     //for (let i = 0; i < modal__button.length; i++) {
-    //   modalButton[i].addEventListener("click", () => openModal(book.title));    }
+    //   modalButton[i].addEventListener("click", () => openModal(book));    }
   });
 }
 
 //modal element
 const modalEl = document.querySelector(".modal");
-async function openModal(data) {
-  const respData = await fetch("books.json").then((response) => {
-    return response.json();
-  });
+async function openModal(book) {
+  // const respData = await fetch("books.json").then((response) => {
+  //   return response.json();
+  // });
 
-  console.log(data);
+  console.log(book);
   modalEl.classList.add("modal--show");
 
   modalEl.innerHTML = `
 <div class="modal__card">
   <img src="" class="modal__book-backdrop" alt="">
   <h2>
-    <span class="modal__book-title">${title}</span>
-    <span class="modal__book-author">${author} </span>
+    <span class="modal__book-title">${book.title}</span>
+    <span class="modal__book-author">${book.author} </span>
 
   </h2> 
   <div class="modal__book-info">
