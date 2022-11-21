@@ -47,7 +47,7 @@ function showBooks(respData) {
               <button type="button" class="add-to-bag">Add to Bag</button> </div>
             </div> </div>`;
     //const btnOpen = document.querySelector(".view-info");
-    booksEl.addEventListener("click", () => openModal(book.title));
+    booksEl.addEventListener("click", () => openModal(book));
 
     booksEl.appendChild(bookEl);
 
