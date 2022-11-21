@@ -43,7 +43,9 @@ function showBooks(respData) {
               <button type="button" class="add-to-bag">Add to Bag</button>
             </div> </div>`;
     //const btnOpen = document.querySelector(".view-info");
-    booksEl.addEventListener("click", () => openModal(book.title));
+    const btnOpen = document.querySelector(".info__button");
+    btnOpen.addEventListener("click", () => openModal(book.title));
+
     booksEl.appendChild(bookEl);
   });
 }
