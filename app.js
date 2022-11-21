@@ -41,7 +41,7 @@ function showBooks(respData) {
             <div class="book__price"><span class="priceN">${book.price}</span> $</div>
             <div class="buttons__together">
             <div class="info__button">
-              <button type="button" class="modal__button">More Info</button>
+              <button type="button" class="modalButton">More Info</button>
             </div>
             <div class="book__button">
               <button type="button" class="add-to-bag">Add to Bag</button> </div>
@@ -51,9 +51,9 @@ function showBooks(respData) {
 
     booksEl.appendChild(bookEl);
 
-    const btnOpen = document.getElementsByClassName("modal__button");
+    let modalButton = document.getElementsByClassName("modalButton");
     for (let i = 0; i < modal__button.length; i++) {
-      btnOpen[i].addEventListener("click", () => openModal(book.title));
+      modalButton[i].addEventListener("click", () => openModal(book.title));
     }
   });
 }
