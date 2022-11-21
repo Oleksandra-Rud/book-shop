@@ -40,7 +40,7 @@ function showBooks(respData) {
             <div class="book__author">${book.author}</div>
             <div class="book__price"><span class="priceN">${book.price}</span> $</div>
             <div class="info__button">
-              <button type="button" id="view-info">More Info</button>
+              <button type="button" class="modal__button-open">More Info</button>
             </div>
             <div class="book__button">
               <button type="button" class="add-to-bag">Add to Bag</button>
@@ -50,13 +50,10 @@ function showBooks(respData) {
     //btnOpen.addEventListener("click", () => openModal(book.title));
 
     booksEl.appendChild(bookEl);
+    const btnOpen = document.querySelector(".modal__button-open");
+    btnOpen.addEventListener("click", () => openModal(book.title));
   });
 }
-
-window.onload = function () {
-  var btnOpen = document.getElementById("view-info");
-  btnOpen && btnOpen.addEventListener("click", openModal());
-};
 
 //modal element
 const modalEl = document.querySelector(".modal");
