@@ -15,7 +15,7 @@
   </head>
   <body>
     <h1><a href="index.html">JS Book-Shop - We sell only JS books</a></h1>
-    <section class="order">
+    <section class="order" id="comlete">
       <h2>Complete Your Order</h2>
       <form id="form-user" action="#" method="post">
         <div class="form-box error" data-errormsg="">
@@ -60,10 +60,10 @@
 
         Enter Your Adress:
         <div class="form-box error" data-errormsg="">
-          <label for="input-first">Your Street *: </label>
+          <label for="input-street">Your Street *: </label>
           <input
             type="text"
-            id="input-first"
+            id="input-street"
             autofocus
             placeholder=" Street"
             tabindex="4"
@@ -74,10 +74,10 @@
       numbers are allowed) -->
 
         <div class="form-box error" data-errormsg="">
-          <label for="input-first">House Number *: </label>
+          <label for="input-house">House Number *: </label>
           <input
             type="number"
-            id="input-first"
+            id="input-house"
             autofocus
             placeholder=" House number"
             tabindex="5"
@@ -88,10 +88,10 @@
       numbers only) -->
 
         <div class="form-box error" data-errormsg="">
-          <label for="input-first">Flat Number *: </label>
+          <label for="input-flat">Flat Number *: </label>
           <input
             type="number"
-            id="input-first"
+            id="input-flat"
             autofocus
             placeholder=" Flat number"
             tabindex="6"
@@ -133,7 +133,7 @@
           <div class="gift-choose">
             <input type="radio" name="gift2" value="discount" id="discount" />
             <label for="discount"></label>
-            <span class="checkmark">Provide 2% discount to the next time</span>
+            <span class="checkmark">Discount 2% to the next order</span>
             <input type="radio" name="gift2" id="pen" value="pen" checked />
             <label for="pen"></label>
             <span class="checkmark">Branded pen or pencil</span>
