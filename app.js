@@ -47,14 +47,13 @@ function showBooks(respData) {
               <button type="button" class="add-to-bag">Add to Bag</button> </div>
             </div> </div>`;
     //const btnOpen = document.querySelector(".view-info");
-    //btnOpen.addEventListener("click", () => openModal(book.title));
+    booksEl.addEventListener("click", () => openModal(book.title));
 
     booksEl.appendChild(bookEl);
 
-    let modalButton = document.getElementsByClassName("modalButton");
-    for (let i = 0; i < modal__button.length; i++) {
-      modalButton[i].addEventListener("click", () => openModal(book.title));
-    }
+    //let modalButton = document.querySelector(".modalButton");
+    //for (let i = 0; i < modal__button.length; i++) {
+    //   modalButton[i].addEventListener("click", () => openModal(book.title));    }
   });
 }
 
