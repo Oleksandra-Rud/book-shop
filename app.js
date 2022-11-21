@@ -8,6 +8,10 @@ nameBookShop.innerHTML = `<div class="h1__name">JS Book-Shop - We sell only JS b
 fragment.appendChild(nameBookShop);
 document.body.appendChild(fragment);
 
+document.getElementById("confirm-order").onclick = function () {
+  location.href = "form.html";
+};
+
 async function getBook() {
   await fetch("books.json")
     .then((response) => {
@@ -55,7 +59,7 @@ function showBooks(respData) {
 
 //modal element
 const modalEl = document.querySelector(".modal");
-async function openModal(title) {
+async function openModal() {
   const resp = await fetch("books.json");
   const respData = await resp.json();
   respData.forEach((book) => {
