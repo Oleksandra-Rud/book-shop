@@ -52,8 +52,8 @@ function showBooks(respData) {
     booksEl.appendChild(bookEl);
   });
 }
-const btnOpen = document.querySelector(".info__button");
-btnOpen.addEventListener("click", () => openModal(book.title));
+let btnOpen = document.querySelector(".info__button");
+btnOpen && btnOpen.addEventListener("click", () => openModal(book.title));
 
 //modal element
 const modalEl = document.querySelector(".modal");
