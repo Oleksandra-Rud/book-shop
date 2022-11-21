@@ -1,7 +1,10 @@
 let body = document.getElementsByTagName("body");
 let fragment = new DocumentFragment();
 let nameBookShop = document.createElement("h1");
-nameBookShop.innerText = "JS Book-Shop - We sell only JS books";
+nameBookShop.innerHTML = `<div class="h1__name">JS Book-Shop - We sell only JS books</div>
+<div class="h1__button">
+              <button type="button" class="confirm-order">Confirm Order</button>
+            </div>`;
 fragment.appendChild(nameBookShop);
 document.body.appendChild(fragment);
 
@@ -43,12 +46,14 @@ function showBooks(respData) {
               <button type="button" class="add-to-bag">Add to Bag</button>
             </div> </div>`;
     //const btnOpen = document.querySelector(".view-info");
-    const btnOpen = document.querySelector(".info__button");
-    btnOpen.addEventListener("click", () => openModal(book.title));
+    //const btnOpen = document.querySelector(".info__button");
+    //btnOpen.addEventListener("click", () => openModal(book.title));
 
     booksEl.appendChild(bookEl);
   });
 }
+const btnOpen = document.querySelector(".info__button");
+btnOpen.addEventListener("click", () => openModal(book.title));
 
 //modal element
 const modalEl = document.querySelector(".modal");
