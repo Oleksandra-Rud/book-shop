@@ -153,9 +153,9 @@ button:hover {
 
 .modal__button {
   background-color: #2db4b4;
+  padding-right: 10px;
 }
 
 .buttons__together {
   display: flex;
-  flex-direction: column;
 }
