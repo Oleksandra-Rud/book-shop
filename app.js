@@ -60,6 +60,7 @@ function showBooks(respData) {
 //modal element
 const modalEl = document.querySelector(".modal");
 async function openModal(title) {
+  const respData = fetch("books.json");
   console.log(title);
   modalEl.classList.add("modal--show");
 
@@ -67,7 +68,7 @@ async function openModal(title) {
 <div class="modal__card">
   <img src="" class="modal__book-backdrop" alt="">
   <h2>
-    <span class="modal__book-title">Book Title </span>
+    <span class="modal__book-title">${respData.title}</span>
     <span class="modal__book-author">Book Author </span>
 
   </h2> 
