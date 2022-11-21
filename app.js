@@ -60,7 +60,10 @@ function showBooks(respData) {
 //modal element
 const modalEl = document.querySelector(".modal");
 async function openModal(title) {
-  const respData = fetch("books.json");
+  const respData = await fetch("books.json").then((response) => {
+    return response.json();
+  });
+
   console.log(title);
   modalEl.classList.add("modal--show");
 
