@@ -55,7 +55,7 @@ function showBooks(respData) {
 
 window.onload = function () {
   var btnOpen = document.getElementById("view-info");
-  btnOpen && btnOpen.addEventListener("click", openModal(book.title));
+  btnOpen && btnOpen.addEventListener("click", openModal());
 };
 
 //modal element
