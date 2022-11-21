@@ -56,7 +56,7 @@ function showBooks(respData) {
 //modal element
 const modalEl = document.querySelector(".modal");
 async function openModal(title) {
-  const resp = await fetch("books.json" + title);
+  const resp = await fetch("books.json");
   const respData = await resp.json();
   respData.forEach((book) => {
     modalEl.classList.add("modal--show");
