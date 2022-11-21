@@ -3,7 +3,7 @@ let fragment = new DocumentFragment();
 let nameBookShop = document.createElement("h1");
 nameBookShop.innerHTML = `<div class="h1__name">JS Book-Shop - We sell only JS books</div>
 <div class="h1__button">
-              <button type="button" class="confirm-order">Confirm Order</button>
+              <button type="button" id="confirm-order">Confirm Order</button>
             </div>`;
 fragment.appendChild(nameBookShop);
 document.body.appendChild(fragment);
@@ -55,7 +55,7 @@ function showBooks(respData) {
 
 window.onload = function () {
   var btnOpen = document.getElementById("view-info");
-  btnOpen && btnOpen.addEventListener("click", () => openModal(book.title));
+  btnOpen && btnOpen.addEventListener("click", openModal(book.title));
 };
 
 //modal element
