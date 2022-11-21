@@ -147,3 +147,6 @@ button:hover {
   position: relative;
   left: 30%;
 }
+#confirm-order:hover {
+  background-color: #1c6e6e;
+}

@@ -48,10 +48,9 @@ function showBooks(respData) {
     //const btnOpen = document.querySelector(".view-info");
     //const btnOpen = document.querySelector(".info__button");
     //btnOpen.addEventListener("click", () => openModal(book.title));
-
-    booksEl.appendChild(bookEl);
     let btnOpen = document.querySelector(".modal__button-open");
     btnOpen.addEventListener("click", () => openModal(book.title));
+    booksEl.appendChild(bookEl);
   });
 }
 
