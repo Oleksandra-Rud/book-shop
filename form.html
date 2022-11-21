@@ -14,21 +14,41 @@
     <title>Form for Book-store</title>
   </head>
   <body>
-    <h1>Complere your Order</h1>
-    The order form contains fields with own validation rules and Complete button
-    +20 Name (mandatory, the length not less than 4 symbols, strings only,
-    without spaces) Surname (mandatory, the length not less than 5 symbols,
-    strings only, without spaces) Delivery date(mandatory, not earlier than next
-    day) Street (mandatory, the length not less than 5 symbols, the numbers are
-    allowed) House number(mandatory, numbers only, positive numbers only) Flat
-    number(mandatory, numbers only, positive numbers only, the dash symbol is
-    allowed. Means, the flat number shouldn't start with minus/dash symbol. For
-    example: -37 is invalid, but 1-37 is valid) Choose the payment type(radio
-    buttons group): Cash or Card (mandatory) Choose 2 gifts: (optional) pack as
-    a gift, add postcard, provide 2% discount to the next time, branded pen or
-    pencil
+    <h1><a href="index.html">JS Book-Shop - We sell only JS books</a></h1>
+    <h2>Complere your Order</h2>
+    <form>
+      Name
+      <!--mandatory, the length not less than 4 symbols, strings only,
+      without spaces-->
 
-    <button type="submit" class="Submit__button">Submit Your Order</button>
+      Surname
+      <!-- mandatory, the length not less than 5 symbols,
+      strings only, without spaces-->
+
+      Delivery date
+      <!--mandatory, not earlier than
+      next day) -->
+
+      Street
+      <!-- mandatory, the length not less than 5 symbols, the
+      numbers are allowed) -->
+      House number
+      <!--mandatory, numbers only, positive
+      numbers only) -->
+      Flat number
+      <!-- mandatory, numbers only, positive numbers only,
+      the dash symbol is allowed. Means, the flat number shouldn't start with
+      minus/dash symbol. For example: -37 is invalid, but 1-37 is valid)-->
+
+      Choose the payment type
+      <!--(radio buttons group): Cash or Card (mandatory)-->
+
+      Choose a gift:
+      <!--(optional) pack as a gift, add postcard, provide 2% discount to the
+      next time, branded pen or pencil-->
+
+      <button type="submit" class="Submit__button">Submit Your Order</button>
+    </form>
     <script src="form.js"></script>
   </body>
 </html>

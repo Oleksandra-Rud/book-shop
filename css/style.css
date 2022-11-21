@@ -116,6 +116,7 @@ button:hover {
   overflow: auto;
   background-color: rgba(58, 58, 58, 0.5);
   transition: width 2s;
+  border-radius: 4px;
 }
 .modal--show {
   display: flex;
@@ -159,4 +160,5 @@ button:hover {
 
 .buttons__together {
   display: flex;
+  text-align: center;
 }
